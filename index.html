@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry App</title>
+    <meta name="description" content="Ghalib se Rumi aur Shakespeare tak — duniya bhar ki shayari, har click par ek naya verse.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <header class="masthead">
+            <span class="ornament" aria-hidden="true">❦</span>
+            <h1>Poetry App</h1>
+            <p class="tagline">Ek sher, ek pal</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Shayari chuno">
+            <button class="chip" data-filter="all" aria-pressed="true" onclick="setFilter('all')">Sab</button>
+            <button class="chip" data-filter="ghalib" aria-pressed="false" onclick="setFilter('ghalib')">Ghalib</button>
+            <button class="chip" data-filter="world" aria-pressed="false" onclick="setFilter('world')">Duniya bhar</button>
+        </div>
+
+        <div id="poetry-container">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p id="verse" aria-live="polite">Har ek baat pe kehte ho tum ki tu kya hai, tumhi kaho ki yeh andaaz-e-guftagu kya hai.</p>
+            <p id="poet" class="poet">— Mirza Ghalib · Hindustan</p>
+        </div>
+
+        <div class="actions">
+            <button onclick="newVerse()">Agla Verse</button>
+            <button id="copy-btn" class="secondary" onclick="copyVerse()">Copy</button>
+        </div>
+        <p id="counter" class="counter" aria-hidden="true"></p>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
